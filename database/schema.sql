@@ -9,8 +9,8 @@ CREATE TABLE burgers
 	PRIMARY KEY (id)
 );
 
-INSERT INTO burgers (burger_name) VALUES ('regular');
-INSERT INTO burgers (burger_name) VALUES ('Supreme');
-INSERT INTO burgers (burger_name) VALUES ('super awesome');
+INSERT INTO burgers (burger_name, devoured) VALUES ('regular', FALSE);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Supreme', FALSE);
+INSERT INTO burgers (burger_name, devoured) VALUES ('super awesome', FALSE);
 
 SELECT * FROM burgers;
