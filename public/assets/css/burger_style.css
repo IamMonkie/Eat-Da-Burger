@@ -2,6 +2,7 @@ body {
   background: #fc6;
   background-image: url("../images/burger.png") center fixed no-repeat;
   color: purple;
+  font-family: "Staatliches", cursive;
 }
 
 #titleContainer {
@@ -24,7 +25,7 @@ body {
   margin: 1em;
 }
 
-.burgerContainer {
+#burgerContainer {
   padding: 1em;
   background: #ffdf9f;
   border-radius: 1em;
