@@ -1,0 +1,31 @@
+body {
+  background: #fc6;
+  background-image: url("../images/burger.png") center fixed no-repeat;
+  color: purple;
+}
+
+#titleContainer {
+  color: #dc3545;
+}
+
+.mainContainer {
+  padding: 1em;
+  display: block;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+#userBurgerContainer {
+  margin: 1em;
+}
+
+.submitButtonContainer {
+  margin: 1em;
+}
+
+.burgerContainer {
+  padding: 1em;
+  background: #ffdf9f;
+  border-radius: 1em;
+}
