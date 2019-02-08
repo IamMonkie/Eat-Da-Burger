@@ -8,7 +8,7 @@ var app = express();
 
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || port;
 // =============================================================
 // Sets up the Express app to handle data parsing
 // app.use(express.urlencoded({ extended: true }));
@@ -28,5 +28,5 @@ app.use("/", routes);
 //Server Listening
 // =============================================================
 app.listen(PORT, function() {
-  console.log("App listening on PORT " || PORT);
+  console.log("App listening on PORT " + PORT);
 });
