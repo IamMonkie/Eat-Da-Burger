@@ -23,7 +23,6 @@ app.set("view engine", "handlebars");
 
 // =============================================================
 // Routes
-// require("./");
 app.use("/", routes);
 
 //Server Listening

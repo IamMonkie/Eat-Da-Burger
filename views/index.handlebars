@@ -2,7 +2,7 @@
 <div class="mainContainer">
     {{!-- "burger image" --}}
     <div class="imgContainer" id="burgerImg" class="alignCenter">
-        <img src="/assets/images/burger.png" alt="">
+        <img src="/assets/images/burger.png" alt="burger.png">
     </div>
     {{!-- -------------------------------------------------------------------------------- --}}
 
@@ -20,9 +20,7 @@
                 {{#each burger_data}}
                 {{#unless this.devoured}}
                 <div class="col-sm-4 text-center" class="task">
-                    {{!-- <div class="col-sm text-center"> --}}
-                        <pre>{{this.id}}. {{this.burger_name}}</pre>
-                    </div>
+                    <pre>{{this.id}}. {{this.burger_name}}</pre>
                 </div>
 
                 {{!-- devour button --}}
@@ -30,17 +28,18 @@
                     <form methods="POST" action="/burgers/update?_method=PUT" class="button-size">
                         <input type="hidden" name="burger_id" type="text" value={{this.id}}>
                         <br>
-
-                        <button type="submit" class="btn btn-danger">DEVOUR!</button>
-                    </form>
-                    {{/unless}}
-                    {{/each}}
                 </div>
+
+                <button type="submit" class="btn btn-danger">DEVOUR!</button>
+                </form>
+                {{/unless}}
+                {{/each}}
+                {{!-- -------------------------------------------------------------------------------- --}}
 
                 <div class="col-sm-4 text-center" class="task">
                     {{#each burger_data}}
                     {{#if this.devoured}}
-                    <input class="form-control" type"text" placeholder="{{this.id}}. {{this.burger_name}}" readonly>
+                    <input class="form-control" type="text" placeholder="{{this.id}}. {{this.burger_name}}" readonly>
                     {{/if}}
                     {{/each}}
                 </div>
@@ -53,13 +52,13 @@
             <div class="col-sm text-center enter_section">
                 <form action="/burgers/create" method="POST">
                     <input type="text" name="burger_name" class="form-control" value="" id="enter_text">
+                    {{!-- -------------------------------------------------------------------------------- --}}
+                    {{!-- submit button --}}
+                    <div class="submitButtonContainer">
+                        <button type="submit" class="btn btn-primary" id="text-enter-button">SUBMIT</button>
+                        <p>Enter a burger you would like to eat</p>
+                    </div>
                 </form>
-                {{!-- -------------------------------------------------------------------------------- --}}
-                {{!-- submit button --}}
-                <div class="submitButtonContainer">
-                    <button type="submit" class="btn btn-primary" id="text-enter-button">SUBMIT</button>
-                    <p>Enter a burger you would like to eat</p>
-                </div>
                 {{!-- -------------------------------------------------------------------------------- --}}
             </div>
         </div>

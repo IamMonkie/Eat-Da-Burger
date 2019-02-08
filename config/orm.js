@@ -11,9 +11,9 @@ var orm = {
     });
   },
 
-  update: function(tableInput, condition, cb) {
+  update: function(tableInput, burgerId, cb) {
     connection.query(
-      "UPDATE " + tableInput + " SET devoured=true WHERE id=" + condition + ";",
+      "UPDATE burger SET devoured=true WHERE id=" + burgerId + ";",
       function(err, result) {
         if (err) throw err;
         cb(result);
@@ -23,7 +23,7 @@ var orm = {
 
   create: function(tableInput, val, cb) {
     connection.query(
-      "INSERT INTO " + tableInput + " (burger_name) VALUES (+val+);",
+      "INSERT INTO " + tableInput + " (burger_name) VALUES ('" + val + "');",
       function(err, result) {
         if (err) throw err;
         cb(result);
