@@ -1,7 +1,7 @@
 var connection = require("./connection.js");
 
 var orm = {
-  all: function(tableInput, cb) {
+  selectAll: function(tableInput, cb) {
     connection.query("SELECT * From " + tableInput + ";", function(
       err,
       result
@@ -11,7 +11,7 @@ var orm = {
     });
   },
 
-  update: function(tableInput, burgerId, cb) {
+  updateOne: function(tableInput, burgerId, cb) {
     connection.query(
       "UPDATE burger SET devoured=true WHERE id=" + burgerId + ";",
       function(err, result) {
@@ -21,7 +21,7 @@ var orm = {
     );
   },
 
-  create: function(tableInput, val, cb) {
+  insertOne: function(tableInput, val, cb) {
     connection.query(
       "INSERT INTO " + tableInput + " (burger_name) VALUES ('" + val + "');",
       function(err, result) {
