@@ -13,7 +13,7 @@ var orm = {
 
   updateOne: function(tableInput, burgerId, cb) {
     connection.query(
-      "UPDATE burger SET devoured=true WHERE id=" + burgerId + ";",
+      "UPDATE burgers SET devoured=true WHERE id=" + burgerId + ";",
       function(err, result) {
         if (err) throw err;
         cb(result);
